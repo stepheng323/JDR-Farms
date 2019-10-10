@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color:#fff;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   font-size: 1em;
@@ -39,11 +39,10 @@ body {
 .heading ul li a:hover {
   color: #e6e600;
 }
-/* .main-container{
-  max-width: 1335px;
-   margin: auto;
-} */
-
+.main-container{
+  max-width: 1315px;
+  margin: auto;
+} 
 .showcase {
   position: relative;
   height: 454px;
@@ -78,46 +77,52 @@ body {
   padding: 0 1em 0em 1em;
   margin-left: 0.5em;
   text-transform: capitalize;
-  font-weight: bold;
+  /* font-weight: bold; */
 
 }
 .btn {
-  padding: 10px 14px;
+  padding: 10px 16px;
   display: inline-block;
   text-decoration: none;
-  /* border: 2px solid #ffffff; */
-  margin-left: 1.7em;
+  margin-left: 1.8em;
   margin-top: 1em;
   background-color: #e6e63e;
   color: #fff;
   cursor: pointer;
   outline: none;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  text-align: left;
+  border-radius: 1px;
 }
 .btn:hover {
   opacity: 0.6;
 }
 .card img {
   width: 100%;
+  display: inline-block;
   height: 530px;
   object-fit: cover;
+  background-color: #000;
 }
 
 .card {
   display: grid;
-  grid-template-columns: 42% 58%;
-  grid-gap: 1em;
+  max-width: 1315px;
+  grid-template-columns: 41.5% 58.5%;
   background: #fff;
+  max-height: 530px;
 }
 .card h2 {
   font-size: 34px;
   padding: 3.8em 2.5em 0.2em 67px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .card p {
   line-height: 26px;
   padding: 10px 42px 10px 70px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
 }
 .learn-more {
   margin-left: 67px;
@@ -125,11 +130,11 @@ body {
   border: 2px solid #909090;
   color: #909090;
   background-color: #fff;
+  border-radius: 0;
 }
 .card:nth-child(even) {
-  grid-template-columns: 58% 42%;
+  grid-template-columns: 58.5% 41.5%;
 }
-
 .fcontainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
