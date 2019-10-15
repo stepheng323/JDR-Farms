@@ -5,95 +5,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-  crossorigin="anonymous"
-/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
   <link href="./style.css" rel="stylesheet" />
   <title>St Jude Farms</title>
 </head>
 
 <body>
   <header class="head-container">
-    <div class="heading">
+    <nav class="heading">
       <a href="index.html"><img class="logo" src="./assets/logo.png" /></a>
-      <ul>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">OUR VALUE</a></li>
-        <li><a href="#">CONTACT US</a></li>
-        <li><a href="#">BLOG</a></li>
+      <div class="hamburger" onclick="openSlideMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="navbar-nav">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="value.html">Our Value</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html">Home</a></li>
+
       </ul>
-    </div>
+      </div>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()"> &times;</a>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="value.html">Our Value</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </div>
   </header>
 
   <div class="showcase">
-    <img src="./assets/showcase.jpg" />
-    <div class="box">
-      <h1>Quality, Quantity, Produce.</h1>
-      <P>we are one of the largest<br/> cashew farms in nigeria.</P>
-      <!-- <a href="about.html" class="btn">about us</a> -->
+    <div class="filter">
+      <div class="box">
+        <h1>St. Jude Farms</h1>
+        <P>we are one of the largest cashew <br />farms in nigeria.</P>
+      </div>
+      <div class="direction" onclick="seeProduce()">
+          <i class="fas fa-angle-double-down fa-3x bounce"></i>
+        <p >Checkout our Produce</p>
+      </div>
     </div>
+
   </div>
 
-  <div class="main-container">
-    <div class="card">
+  <main class="main-container">
+    <section class="card" data-aos="fade-up">
       <div class="text">
-        <h2>The Cahew Fruit</h2>
+        <h2>Cahew Fruit</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nemo similique optio nostrum mollitia sed,
           earum maiores doloribus dolorem possimus sit voluptatem nihil saepe, modi molestias consectetur aspernatur
           adipisci magni!</p>
         <a class="learn-more" href="#">Learn More</a>
       </div>
       <img src="./assets/cashew-seed.jpg" />
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="./assets/oranges.jpg" />
+    <section class="card" data-aos="fade-right">
       <div class="text">
         <h2>Oranges</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nemo similique optio nostrum mollitia sed,
-          earum maiores doloribus dolorem possimus sit voluptatem nihil saepe, modi molestias consectetur aspernatur
-          adipisci magni!</p>
+          earum maiores doloribus dolorem possimus sit vo</p>
         <a class="learn-more btn" href="#">Learn More</a>
       </div>
+      <img src="./assets/oranges.jpg" />
+    </section>
 
-    </div>
-
-    <div class="card">
+    <section class="card" data-aos="fade-left">
       <div class="text">
-        <h2>Cashew Molases</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis accusantium reprehenderit
-          cupiditate porro repellat dicta quas dolore. Rem omnis voluptatibus, vel aut iusto, provident voluptas earum
-          deleniti laboriosam expedita officiis unde officia ipsa. Doloribus accusantium id minima natus expedita
+        <h2>Plantain</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veritatis accusantium officia ipsa.
+          Doloribus accusantium id minima natus expedita
           .</p>
         <a class="learn-more btn" href="#">Learn More</a>
-
       </div>
-      <img src="./assets/agric2.png" />
-    </div>
-    <div class="card">
-      <img src="./assets/nuts.jpg" />
+      <img src="./assets/plantain.jpg" />
+    </section>
+
+    <section class="card" data-aos="fade-up">
       <div class="text">
-        <h2>The Cahew Nut</h2>
+        <h2>Cahew Nuts</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nemo similique optio nostrum mollitia sed,
-          earum maiores doloribus dolorem possimus sit voluptatem nihil saepe, modi molestias consectetur aspernatur
+          modi molestias consectetur aspernatur
           adipisci magni!</p>
         <a class="learn-more btn" href="#">Learn More</a>
       </div>
-    </div>
-  </div>
+      <span class="image">
+        <img src="./assets/Cashew.jpg" />
+      </span>
+    </section>
+
+  </main>
+
   <footer class="footer">
     <div class="fcontainer">
+
       <div class="one">
+        <!-- <<div class="footer-logo">
+              <img class="f-logo" src="./assets/logo.png" /> ><p>St. Jude <br/>Farms</p>
+            </div>  -->
         <h3>HELP AND SUPPORT</h3>
         <p>
           <i class="far fa-clock fa-1x"></i> Mon-Fri: 8am-5pm <br /><span class="pad">Sat: 10am-5pm</span>
-        </p>
+        </p><br />
         <i class="fas fa-phone fa-1x"></i> +2348162511023<br /><span class="pad">
           +2348067892221</span>
       </div>
@@ -107,7 +130,7 @@
         </ul>
       </div>
       <div class="three">
-        <h3>ABOUT St.JUDE FARMS</h3>
+        <h3>ST.JUDE FARMS</h3>
         <ul>
           <li><a href="index.html">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -128,15 +151,18 @@
         </p>
       </div>
     </div>
-    <P class="copy">2019 &copy; All rights reserved</P>
+    <P class="copy"> &copy; 2019 Copyright. St. Jude Farms. Privacy Policy. Terms Of Use. Website design and development
+      by zion System.</P>
   </footer>
+  <script src="./index.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- <script>
+
+  <script>
     AOS.init({
-      offset: 400,
-      duration: 1000
+      offset: 250,
+      duration: 1500
     });
-  </script> -->
+  </script>
 </body>
 
 </html>
