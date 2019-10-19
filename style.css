@@ -1,7 +1,6 @@
 body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
-  /* font-family: 'Oswald', sans-serif; */
   font-size: 1em;
   color: #000;
 }
@@ -20,7 +19,6 @@ body {
   margin: auto;
   padding: 2vh;
   display: flex;
- 
 }
 .logo {
   width: 100px;
@@ -49,49 +47,67 @@ body {
   display: none;
 }
 .showcase {
-  background-image: url(./assets/showcase.jpg);
+  background-image: url(./assets/roman-synkevych-fjj7lVpCxRE-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
   height: 90vh;
-  top: 0;
 }
-.filter{
+.filter {
   background-color: rgba(241, 234, 132, 0.116);
-	position: absolute;
-	width: 100%;
+  position: absolute;
+  width: 100%;
   height: 100%;
 }
 
 .box {
   height: auto;
-  width: 400px;
   padding-bottom: 2em;
   opacity: 0.94;
   position: absolute;
   top: 10%;
   left: 7%;
 }
-.direction{
+.box h1 {
+  color: #fff;
+  padding: 0 0 0.5em 0;
+  font-size: 52px;
+  margin-left: 0.6em;
+}
+
+.box p {
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 26px;
+  margin-left: 2em;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.direction {
   position: absolute;
   color: #fff;
   top: 80%;
   right: 10%;
   cursor: pointer;
 }
-.direction p{
-  font-size: 1.3em;
+.direction p {
+  font-size: 1.2em;
   font-weight: bold;
-  margin-left: -40%;
 }
-.bounce{
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
+.bounce {
+  position: relative;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  left: 2em;
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -101,45 +117,89 @@ body {
     transform: translateY(-15px);
   }
 }
-.box h1 {
-  color: #fff;
-  padding: 0.5em 0.5em;
-  font-size: 52px;
-  line-height: 1.3;
-  margin-bottom: 0;
-}
 
-.box p {
-  color: #fff;
-  font-size: 1.2em;
-  line-height: 26px;
-  padding: 0.5em;
-  padding-left: 1.5em;
-  text-transform: capitalize;
-  font-weight: 600;
-}
 .btn:hover {
   opacity: 0.6;
 }
-.card img {
+
+.first-card {
+  display: grid;
+  width: 70%;
+  margin: auto;
+  padding-top: 3%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4%;
+  padding-bottom: 3em;
+}
+
+.card-bg {
+  background-image: url(./assets/agric2.png);
   width: 100%;
-  max-height: 530px;
-  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 256px;
+}
+.card-bg2 {
+  background-image: url(./assets/molases.jpg);
+}
+.card-bg3 {
+  background-image: url(./assets/about\ -\ Copy.jpg);
+}
+.on-image {
+  margin: 0;
+  position: relative;
+  top: 40%;
+  color: #fff;
+  font-size: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.description {
+  position: relative;
+  text-align: center;
+  padding: 1em 0.2em 1em 0.2em;
+  line-height: 22px;
+  font-size: 15px;
+  color: #414042;
+}
+.first-card a {
+  display: block;
+  width: 60%;
+  margin: auto;
+  text-decoration: none;
+  padding: 18px 18px;
+  text-align: center;
+  border-radius: 25px;
+  color: #414042;
+  border: 1px solid #414042;
+}
+.first-card a:hover{
+  opacity: 0.6;
+}
+.card img {
+  width:100%;
+  max-height: 539px;
+  object-fit: contain;
 }
 .main-container {
-  max-width: 1310px;
+  max-width: 1315px;
   margin: auto;
+  overflow: hidden;
   margin-bottom: -5px;
 }
 .card {
   display: grid;
   max-width: 1315px;
   grid-template-columns: 41.5% 58.5%;
-  /* margin-bottom: 2em; */
+  max-height: 539px;
+  background-color: #f1f1f1;
 }
 .card h2 {
   font-size: 34px;
   margin-bottom: 0.5em;
+  font-family: 'Oswald', sans-serif;
 }
 .card p {
   line-height: 26px;
@@ -154,41 +214,45 @@ body {
   font-size: 17px;
 }
 .learn-more {
-  display: inline-block;
+  font-size: 15px;
   text-decoration: none;
-  padding: 8px 18px;
-  border: 2px solid #909090;
+  width: 40%;
+  padding: 10px 28px;
   color: #909090;
-  background-color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  border: 2px solid #909090;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  border-radius: 25px;
 }
 .card:nth-child(even) {
   grid-template-columns: 58.5% 41.5%;
+  background-color: #fff;
 }
 .card:nth-child(even) div {
   order: 1;
 }
 .footer {
+  position: relative;
   background: #333;
-  /* position: absolute; */
 }
 
 .fcontainer {
-  padding-left: 45%;
   position: relative;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background-color: #333;
   color: #fff;
+  justify-content: center;
   justify-items: center;
-  padding-top: 3em;
-  padding-bottom: 4em;
-  font-size: 0.93em;
+  padding: 3em 12em 4em 12em;
+  font-size: 0.8em;
 }
 .fcontainer ul {
   list-style-type: none;
-  padding-right: 50px;
+  width: 100%;
 }
 .fcontainer ul li a {
   text-decoration: none;
@@ -197,7 +261,6 @@ body {
   color: #fff;
   overflow: hidden;
   line-height: 1.8;
-
 }
 .fcontainer ul li a:hover {
   color: #e6e63e;
@@ -218,7 +281,6 @@ body {
   font-size: 1em;
   padding-bottom: 0.5em;
   color: #fff;
-  padding-right: 50px;
 }
 .fcontainer .pad {
   margin-left: 6%;
@@ -236,7 +298,7 @@ body {
   margin: 0;
 }
 .copy {
-  height: 30vh;
+  height: 15vh;
   background: #333;
   color: #fff;
   padding: 2em;
@@ -246,6 +308,7 @@ body {
   width: 85%;
   margin: auto;
 }
+
 /* Media Queries ....................... */
 @media (max-width: 768px) {
   .line {
@@ -253,6 +316,9 @@ body {
     height: 3px;
     background: #000;
     margin: 5px;
+  }
+  .head-container {
+    position: unset;
   }
   .heading {
     position: relative;
@@ -267,6 +333,7 @@ body {
   }
   .navbar-nav {
     display: none;
+    list-style-type: none;
   }
   .side-nav {
     display: unset;
@@ -277,18 +344,22 @@ body {
     top: 0%;
     right: 0%;
     background: black;
-    opacity: 0.9;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+    background-color: #fff;
+  }
+  .side-nav li {
+    list-style-type: none;
   }
   .side-nav a {
-    padding: 8px 8px 8px 20px;
+    padding: 12px 8px 12px 20px;
     text-decoration: none;
-    color: white;
+    color: #333;
     display: block;
     transition: 0.3s ease-out;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
   }
   .side-nav a:hover {
     color: #e6e63e;
@@ -300,8 +371,9 @@ body {
     font-size: 30px;
     margin-left: 50px;
   }
-  .showcase{
-    height: 354px;
+  .showcase {
+    height: 90vh;
+    top: 0vh;
   }
   .showcase img {
     width: 100%;
@@ -309,17 +381,46 @@ body {
     object-fit: cover;
     padding: 0;
   }
-  .box{
-    top: 0;
-    left: 0;
+  .main-container {
+    position: unset;
+  }
+  .box {
+    top: 10%;
+    left: 2%;
+  }
+  .direction {
+    color: #fff;
+    top: 80%;
+    right: 0%;
+    cursor: pointer;
+  }
+  .direction p {
+    font-size: 1em;
   }
   .main-container {
     transition: margin-right 0.5s;
+    width: 90%;
+  }
+
+  
+.container{
+  margin-bottom: 10em;
+}
+  .first-card {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-bottom: 3em;
+  }
+  .first-card a{
+    width: 35%;
+  }
+  .card-bg {
+    height: 50vh;
   }
   .card {
     grid-template-columns: 1fr;
     max-height: fit-content;
-    margin-bottom: 0.5em;
+    padding-bottom: 1em;
   }
   .card div {
     order: 1;
@@ -345,31 +446,39 @@ body {
   .text {
     margin: 1em 1.8em;
     padding: 0em;
+    font-size: 1em;
   }
   .fcontainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: start;
+    justify-items: center;
     line-height: 1.2;
-    padding-bottom: 2em;
-    padding-left: 1em;
-    font-size: smaller;  
+    padding: 3em 2em 4em 2em;
+    font-size: smaller;
+  }
+  .f-imageAndText img {
+    display: none;
   }
   .copy {
-    height: 20vh;
+    height: 10vh;
     padding: 1em 1%;
     font-size: 11px;
   }
 }
+
 @media (max-width: 568px) {
   .fcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 2em;
+    padding-top: 2em;
+    margin: 0;
   }
   .one {
-    padding: 0em 5em 0 0em;
+    padding: 0em 0em 0em 0em;
   }
   .social {
-    padding: 0em oem 0 0em;
+    padding: 0em 1em 0em 0em;
+  }
+  .container{
+    margin-bottom: 8em;
   }
 }
